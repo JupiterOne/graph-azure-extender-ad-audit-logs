@@ -1,13 +1,23 @@
+import 'isomorphic-fetch';
 import { IntegrationInvocationConfig } from '@jupiterone/integration-sdk-core';
-import { integrationSteps } from './steps';
-import {
-  validateInvocation,
-  IntegrationConfig,
-  instanceConfigFields,
-} from './config';
+import { integrationStep } from './steps';
+import { validateInvocation } from './validateInvocation';
+import { IntegrationConfig } from './types';
 
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
-  instanceConfigFields,
+  instanceConfigFields: {
+    directoryId: {
+      type: 'string',
+      mask: true,
+    },
+    clientId: {
+      type: 'string',
+    },
+    clientSecret: {
+      type: 'string',
+      mask: true,
+    },
+  },
   validateInvocation,
-  integrationSteps,
+  integrationSteps: [integrationStep],
 };
