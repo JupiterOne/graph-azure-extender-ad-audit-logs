@@ -36,6 +36,26 @@ with JupiterOne in the [integration documentation](docs/jupiterone.md).
 2. `yarn graph` to show a visualization of the collected data
 3. `yarn j1-integration -h` for additional commands
 
+### Ingesting data as a custom integration
+
+**In JupiterOne**
+1. Create a custom integration in JupiterOne (apps.us.jupiterone.io/integrations/custom)
+2. Generate an INTEGRATION API KEY for use with this custom integration
+
+**In this project / CLI**
+1. Clone this repo (`git clone git@github.com:JupiterOne/graph-azure-extender-ad-audit-logs.git`) or download and unzip this project.
+2. Run `yarn install` from a command line
+3. Create a `.env` file at the root of this project with the following values:
+    ```
+    JUPITERONE_API_KEY=<jupiterone-api-key>
+    JUPITERONE_ACCOUNT=<jupiterone-account-id> 
+
+    DIRECTORY_ID=<azure-tenant-id>
+    CLIENT_ID=<azure-client-id>
+    CLIENT_SECRET=<azure-client-secret>
+    ```
+4. Run `yarn j1-integration run --integrationInstanceId <integration-instance-id>` from a command line
+
 ### Making Contributions
 
 Start by taking a look at the source code. The integration is basically a set of
