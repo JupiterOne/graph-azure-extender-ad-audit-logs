@@ -34,6 +34,7 @@
     "@jupiterone/integration-sdk-testing": "^6.3.0"
   },
   "dependencies": {
-    "@jupiterone/graph-azure": "^5.27.1"
+    "@jupiterone/graph-azure": "^5.27.1",
+    "isomorphic-fetch": "^3.0.0"
   }
 }

@@ -1,3 +1,4 @@
+import 'isomorphic-fetch';
 import { IntegrationInvocationConfig } from '@jupiterone/integration-sdk-core';
 import { integrationStep } from './steps';
 import { validateInvocation } from './validateInvocation';

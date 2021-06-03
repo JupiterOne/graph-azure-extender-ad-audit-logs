@@ -37,7 +37,7 @@ export class AuditLogClient extends GraphClient {
           } catch (err) {
             this.logger.error(
               {
-                resourceUrl,
+                err,
               },
               'Callback error while iterating an API response in DirectoryGraphClient',
             );

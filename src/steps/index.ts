@@ -65,6 +65,7 @@ const integrationStep: Step<IntegrationStepExecutionContext<
               _key: directoryAudit.id,
               _type: 'azure_ad_audit_event',
               _class: 'Record',
+              name: directoryAudit.id,
               id: directoryAudit.id,
               category: directoryAudit.category,
               correlationId: directoryAudit.correlationId,
