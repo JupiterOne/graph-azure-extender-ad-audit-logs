@@ -2,6 +2,10 @@
   "name": "@jupiterone/graph-azure-extender-ad-audit-logs",
   "version": "0.0.0",
   "description": "A JupiterOne Integration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JupiterOne/graph-azure-extender-ad-audit-logs"
+  },
   "license": "MPL-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
